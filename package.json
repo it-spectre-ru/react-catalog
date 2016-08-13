@@ -2,7 +2,9 @@
   "name": "Каталог курсов",
   "version": "1.0.0",
   "description": "React and Redux",
-  "scripts": {},
+  "scripts": {
+	"start": "babel-node tools/srcServer.js"
+  },
   "author": "s.tsvetkov",
   "license": "MIT",
   "dependencies": {
