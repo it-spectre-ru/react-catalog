@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "React and Redux",
   "scripts": {
-	"prestart": "babel-node tools/startMessage.js",
-	"start": "babel-node tools/srcServer.js",
-	"lint": "esw webpack.config.* src tools",
-	"lint:watch": "npm run lint -- --watch"
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "babel-node tools/srcServer.js",
+    "lint": "esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch"
   },
   "author": "s.tsvetkov",
   "license": "MIT",
