@@ -6,9 +6,6 @@ import AboutPage from './components/about/AboutPage';
 import CoursesPage from './components/course/CoursesPage';
 import ManageCoursePage from './components/course/ManageCoursePage';
 
-
-
-
 export default  (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
