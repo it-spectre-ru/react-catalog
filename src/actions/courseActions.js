@@ -1,30 +1,33 @@
 import * as types from './actionTypes';
 import courseApi from '../api/mockAuthorApi';
+import {beginAjaxCall} from './ajaxStatusActions';
 
 export function loadCoursesSuccess(courses) {
-  return { type: types.LOAD_COURSES_SUCCESS, courses }
+  return {type: types.LOAD_COURSES_SUCCESS, courses}
 }
 
 export function createCourseSuccess(courses) {
-  return { type: types.CREATE_COURSE_SUCCESS, course };
+  return {type: types.CREATE_COURSE_SUCCESS, course};
 }
 
 export function updateCourseSuccess(course) {
-  return { type: types.UPDATE_COURSE_SUCCESS, course };
+  return {type: types.UPDATE_COURSE_SUCCESS, course};
 }
 
 export function loadCourse() {
   return function (dispatch) {
-   return courseApi.getAllCourses().then(courses => {
-     dispatch(loadCoursesSuccess(courses));
-   }).catch(error => {
-     throw(error);
-   });
+    dispatch(beginAjaxCall());
+    return courseApi.getAllCourses().then(courses => {
+      dispatch(loadCoursesSuccess(courses));
+    }).catch(error => {
+      throw(error);
+    });
   }
 }
 
 export function saveCourse(course) {
   return function (dispatch, getState) {
+    dispatch(beginAjaxCall());
     return courseApi.saveCourse(course).then(course => {
       course.id ? dispatch(updateCourseSuccess(course)) :
         dispatch(createCourseSuccess(course));

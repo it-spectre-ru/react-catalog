@@ -8,7 +8,7 @@ export function loadAuthorsSucceess(authors) {
 
 export function loadAuthors() {
   return dispatch => {
-    dispatch(beginAjaxCall());
+    dispatch(beginAjaxCall()); 
     return AuthorApi.getAllAuthors().then(authors => {
       dispatch(loadAuthorsSucceess(authors));
     }).catch(error => {
