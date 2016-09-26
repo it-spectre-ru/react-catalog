@@ -37,6 +37,3 @@ export function saveCourse(course) {
     });
   };
 }
-
-
-
