@@ -33,6 +33,3 @@ describe('Тестирование -CourseForm- via Enzyme', () => {
 });
 
 
-
-
-
