@@ -15,8 +15,3 @@ export default  (
     <Route path="about" component={AboutPage} />
   </Route>
 );
-
-
-
-
-
