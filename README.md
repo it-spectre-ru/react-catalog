@@ -35,8 +35,8 @@
 
 
 #### Установка и настройка
-* *git clone* https://stasok@bitbucket.org/stasok/course-app.git - **скопируйте репозиторий к себе**
-* *cd course-app* - **перейдите в папку с проектом**
+* *git clone* https://bitbucket.org/stasok/redux-starter - **скопируйте репозиторий к себе**
+* *cd redux-starter* - **перейдите в папку с проектом**
 * *npm i*  - **установите зависимости**
 * *npm start -s* - **старт приложения в режиме разработки**
 * *npm run build* - **сборка для продакшена, без горячей перезагрузки - минифицированная c sourcemap**
