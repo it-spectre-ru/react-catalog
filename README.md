@@ -43,7 +43,7 @@
 
 
 #### Получить помощь
-https://bitbucket.org/stasok/course-app/pull-requests/ - принимаю пожелания и замечания.
+[Ваши пожелания и замечания](https://github.com/it-spectre-ru/react-catalog/pulls)
 
 
 #### Смотрите также
